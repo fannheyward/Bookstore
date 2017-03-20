@@ -7,5 +7,5 @@ protoc -I $GOPATH/src/github.com/googleapis/googleapis/ -I. pb/book.proto --swag
 ```
 
 1. <https://github.com/grpc-ecosystem/grpc-gateway>
-2. <https://pdoviet.wordpress.com/2017/03/06/a-simple-api-using-protobuf-and-grpc/?utm_source=golangweekly&utm_medium=email>
+2. <https://pdoviet.wordpress.com/2017/03/06/a-simple-api-using-protobuf-and-grpc/>
 3. <http://coreos.com/blog/grpc-protobufs-swagger.html>
