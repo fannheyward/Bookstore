@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package im.fann.book;
+
+option java_multiple_files = true;
+option java_outer_classname = "Book";
+option java_package = "im.fann.book";
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+message Book {
+  int64 id = 1;
+  string title = 2;
+}
+
+message BookResp {
+  repeated Book books = 1;
+}
+
+service BookService {
+  rpc ListBooks(google.protobuf.Empty) returns (BookResp) {
+    option (google.api.http) = {
+      get: "/v1/books"
+    };
+  }
+}
